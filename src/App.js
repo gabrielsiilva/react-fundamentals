@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useState, useMemo } from "react";
 
 import GlobalStyle from './styles/global'
 import Layout from './components/Layout'
-import { ThemeProvider } from "styled-components";
-
-import themes from './styles/themes'
+import { ThemeProvider } from "./context";
 
 function App() {
+
     return (
-        <ThemeProvider theme={themes.light}>
+        <ThemeProvider>
             <GlobalStyle />
             <Layout />
         </ThemeProvider>
